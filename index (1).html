@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Concordia Restaurant</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf8f4;color:#2a2118;font-family:'DM Sans',sans-serif;font-weight:300;min-height:100vh}
+.page{max-width:560px;margin:0 auto;padding:48px 28px 80px}
+.header{text-align:center;margin-bottom:48px;padding-bottom:32px;border-bottom:1px solid #e8e0d5}
+.header h1{font-family:'Playfair Display',serif;font-size:36px;font-weight:600;color:#b83a1a;letter-spacing:-0.5px;line-height:1.2;margin-bottom:6px}
+.header p{font-size:13px;color:#9a8878;letter-spacing:0.04em}
+.section{margin-bottom:40px}
+.section-title{font-family:'Playfair Display',serif;font-size:28px;font-style:italic;color:#b83a1a;margin-bottom:24px;padding-bottom:10px;border-bottom:1px solid #e8d5c8}
+.item{display:flex;align-items:flex-start;gap:12px;padding:16px 0;border-bottom:1px solid #f0ece6}
+.item:last-child{border-bottom:none}
+.item.off{opacity:0.4}
+.item-left{flex:1}
+.item-name{font-family:'Playfair Display',serif;font-size:18px;font-weight:400;color:#2a2118;margin-bottom:5px;line-height:1.3}
+.item.off .item-name{text-decoration:line-through;color:#9a8878}
+.item-desc{font-size:13px;color:#7a6a5a;line-height:1.6;font-style:italic}
+.item-right{flex-shrink:0;text-align:right;padding-top:2px}
+.item-price{font-family:'Playfair Display',serif;font-size:18px;color:#b83a1a;font-weight:400}
+.badge-off{display:inline-block;font-size:10px;background:#f5ede8;color:#b83a1a;border:1px solid #e8c8bc;padding:2px 8px;border-radius:100px;margin-top:6px;letter-spacing:0.04em}
+.footer{text-align:center;margin-top:48px;padding-top:24px;border-top:1px solid #e8e0d5;font-size:12px;color:#b8a898}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>Concordia Restaurant</h1>
+    <p id="date-line">—</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Entrées</div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Salade de chèvre chaud</div>
+        <div class="item-desc">Toasts de chèvre fondant sur lit de roquette, noix caramélisées, miel de fleurs et vinaigrette balsamique.</div>
+      </div>
+      <div class="item-right"><div class="item-price">9€</div></div>
+    </div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Tartare de saumon frais</div>
+        <div class="item-desc">Dés de saumon mariné aux agrumes, avocat crémeux, touche de ciboulette, accompagné de blinis croustillants.</div>
+      </div>
+      <div class="item-right"><div class="item-price">11€</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Plats</div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Entrecôte grillée, sauce au poivre</div>
+        <div class="item-desc">Entrecôte de bœuf maturée, servie avec frites maison croustillantes et salade verte, nappée de sauce au poivre crémeuse.</div>
+      </div>
+      <div class="item-right"><div class="item-price">24€</div></div>
+    </div>
+
+    <div class="item off">
+      <div class="item-left">
+        <div class="item-name">Magret de canard aux figues</div>
+        <div class="item-desc">Magret de canard rôti, réduction de vin rouge et figues confites, accompagné d'un écrasé de pommes de terre à l'huile de truffe.</div>
+        <div class="badge-off">Indisponible aujourd'hui</div>
+      </div>
+      <div class="item-right"><div class="item-price">19€</div></div>
+    </div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Risotto aux champignons sauvages</div>
+        <div class="item-desc">Risotto crémeux à l'arôme intense de champignons forestiers, agrémenté de parmesan fraîchement râpé et de persil.</div>
+      </div>
+      <div class="item-right"><div class="item-price">17€</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Desserts</div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Tarte tatin maison</div>
+        <div class="item-desc">Pommes caramélisées, pâte feuilletée dorée, servie tiède avec une boule de glace vanille.</div>
+      </div>
+      <div class="item-right"><div class="item-price">6€</div></div>
+    </div>
+
+    <div class="item">
+      <div class="item-left">
+        <div class="item-name">Café gourmand</div>
+        <div class="item-desc">Sélection de mini-desserts maison : macaron, financier, mousse au chocolat, et sorbet citron, accompagné d'un espresso.</div>
+      </div>
+      <div class="item-right"><div class="item-price">7€</div></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    Concordia Restaurant &nbsp;·&nbsp; <span id="footer-date"></span>
+  </div>
+</div>
+<script>
+var d = new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+document.getElementById('date-line').textContent = 'Menu du ' + d;
+document.getElementById('footer-date').textContent = d;
+</script>
+</body>
+</html>
